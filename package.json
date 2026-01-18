@@ -1,0 +1,26 @@
+{
+    "name": "profindr-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "web-client",
+        "web-admin",
+        "mobile",
+        "packages/*",
+        "backend"
+    ],
+    "scripts": {
+        "dev:client": "npm run dev --workspace=web-client",
+        "dev:admin": "npm run dev --workspace=web-admin",
+        "build": "npm run build --workspaces",
+        "lint": "npm run lint --workspaces",
+        "test": "npm run test --workspaces"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.0",
+        "turbo": "^1.11.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

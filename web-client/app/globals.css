@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base - Deep Space / Midnight Blue */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    /* Cards - Glassy/Darker */
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    /* Popovers */
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Primary - Neon Rose/Pink */
+    --primary: 346 87% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Muted Blue/Grey */
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted */
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    /* Accent */
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs */
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 346 87% 60%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Utilities for Glow & Glass */
+.glow-text {
+  text-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+}
+
+.glow-box {
+  box-shadow: 0 0 40px -10px rgba(244, 63, 94, 0.3);
+}
+
+.glass-nav {
+  @apply bg-black/20 backdrop-blur-xl border-white/10;
+}
+
+.glass-card {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md;
+}
+
+.glass-card {
+  @apply bg-white border border-gray-200 shadow-xl;
+}
+
+.search-input-wrapper {
+  @apply bg-gray-50 border border-gray-200;
+}
